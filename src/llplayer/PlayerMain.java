@@ -24,6 +24,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
@@ -123,6 +124,11 @@ public class PlayerMain {
         fl.setAlignment(FlowLayout.LEFT);
         controlsPane.setLayout(fl);
         JButton playButton = new JButton("Play");
+	/* ë²„íŠ¼ ì´ë¯¸ì§€ ì¶”ê°€
+	JButton playButton = new JButton(new ImageIcon("img/start.png"));
+        playButton.setBorderPainted(false);
+        playButton.setContentAreaFilled(false);
+	*/
         controlsPane.add(playButton);
         JButton pauseButton = new JButton("Pause");
         controlsPane.add(pauseButton);
@@ -221,7 +227,7 @@ public class PlayerMain {
              	
              	int ret = chooser.showOpenDialog(null);
              	if(ret != JFileChooser.APPROVE_OPTION) {
-             		//ÆÄÀÏÀ» ¼±ÅÃÇÏÁö ¾ÊÀº °æ¿ì.
+             		//íŒŒì¼ì„ ì„ íƒí•˜ì§€ ì•Šì€ ê²½ìš°.
              		return;
              	}
              	mediaFilePath = chooser.getSelectedFile().getPath();
@@ -254,7 +260,7 @@ public class PlayerMain {
                  	
                  	int ret = chooser.showOpenDialog(null);
                  	if(ret != JFileChooser.APPROVE_OPTION) {
-                 		//ÆÄÀÏÀ» ¼±ÅÃÇÏÁö ¾ÊÀº °æ¿ì.
+                 		//íŒŒì¼ì„ ì„ íƒí•˜ì§€ ì•Šì€ ê²½ìš°.
                  		return;
                  	}
                  	
